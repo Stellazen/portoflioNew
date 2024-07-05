@@ -5,8 +5,14 @@ defineProps<{
 </script>
 
 <template>
-  <div>
+  <div class="exemplo">
     {{msg}}
   </div>
 </template>
+
+<style scoped>
+  .exemplo{
+    color: white;
+  }
+</style>
 
