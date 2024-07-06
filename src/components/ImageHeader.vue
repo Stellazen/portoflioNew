@@ -10,9 +10,13 @@
 
 <style scoped>
 .header {
-  background: url('../assets/pexels-gasparzaldo-6769533.jpg') no-repeat center center;
+  background: url('../assets/waves.jpg') no-repeat center center;
   background-size: cover;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 </style>
