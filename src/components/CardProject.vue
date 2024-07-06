@@ -12,15 +12,15 @@ const props = defineProps<{
 
 <template>
   <div class="container">
-    <div class="description">
+    <div class="container__description">
       <h2>{{ name }}</h2>
-      <p class="descritpion">{{ props.description }}</p>
+      <p class="container__description__p">{{ props.description }}</p>
       <div>
         <span v-for="(tech, index) in props.technologies" :key="index">{{ tech }}</span>
       </div>
     </div>
-    <div class="project_photo" :style="{ backgroundImage: `url(${props.img})` }">
-      <a :href="props.url" target="_blank">clica</a>
+    <div class="container__photo" :style="{ backgroundImage: `url(${props.img})` }">
+      <a class="container__link" :href="props.url" target="_blank">clica</a>
     </div>
   </div>
 </template>
@@ -31,10 +31,10 @@ const props = defineProps<{
       margin: 15px;
       justify-content: center;
     }
-    .descritpion{
-      max-width: 500px
+    .container__description{
+      max-width: 500px;
     }
-    .project_photo{
+    .container__photo{
         width: 500px;
         height: 300px;
         background: no-repeat center center cover;

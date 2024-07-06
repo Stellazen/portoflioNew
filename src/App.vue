@@ -1,6 +1,5 @@
 <script lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 import ImageHeader from './components/ImageHeader.vue'
 import CardProject from './components/CardProject.vue'
 import Data from './data/data.json'
@@ -9,7 +8,7 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'App',
   components:{
-    HelloWorld,
+  
     ImageHeader,
     CardProject
   },
@@ -24,7 +23,6 @@ export default defineComponent({
 
 <template>
   <ImageHeader /> 
-  <HelloWorld msg="coisinha" /> 
   <div>
     <CardProject
       v-for="(project, index) in protjects"
