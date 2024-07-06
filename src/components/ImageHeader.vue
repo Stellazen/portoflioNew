@@ -12,6 +12,7 @@
 .header {
   background: url('../assets/waves.jpg') no-repeat center center;
   background-size: cover;
+  background-attachment: fixed;
   width: 100vw;
   height: 100vh;
   display: flex;

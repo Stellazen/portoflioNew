@@ -16,7 +16,7 @@ const props = defineProps<{
       <h2>{{ name }}</h2>
       <p class="container__description__p">{{ props.description }}</p>
       <div>
-        <span v-for="(tech, index) in props.technologies" :key="index">{{ tech }}</span>
+        <span class="container__description__technology" v-for="(tech, index) in props.technologies" :key="index">{{ tech }}</span>
       </div>
     </div>
     <div class="container__photo" :style="{ backgroundImage: `url(${props.img})` }">
@@ -38,5 +38,11 @@ const props = defineProps<{
         width: 500px;
         height: 300px;
         background: no-repeat center center cover;
+    }
+    .container__description__technology{
+      background-color: var(--soft_green);
+      margin: 5px;
+      padding: 5px;
+      border-radius: 5px;
     }
 </style>

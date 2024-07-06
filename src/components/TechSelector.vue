@@ -1,16 +1,21 @@
 <script setup lang="ts">
 import { defineProps, defineEmits, computed } from 'vue'
+import { iconMapping } from '@/assets/iconMapping';
 
 const props = defineProps<{
-  tech: string
+  tech: string;
   selectedTechnology: string | null
 }>()
 
 const emits = defineEmits<{
-  (e: 'select', tech: string | null): void
+  (e: 'select', tech: string): void
 }>()
 
 const isActive = computed(() => props.tech === props.selectedTechnology)
+
+const getIconForTechnology = (tech: string): string => {
+  return iconMapping[tech] || '/icons/default.png'
+}
 
 const selectTechnology = () => {
   emits('select', props.tech)
@@ -18,12 +23,21 @@ const selectTechnology = () => {
 </script>
 
 <template>
-  <button class="button" @click="selectTechnology" :class="{ active: isActive }">
-    {{ tech }}
-  </button>
+        <button class="button" @click="selectTechnology" :class="{ active: isActive }">
+        <img
+          :src="getIconForTechnology(tech)"
+          :alt="tech"
+          class="button__icons"
+        />
+      </button>
+  
 </template>
 
 <style scoped>
+.container{
+    display: flex;
+    flex-direction: row;
+}
 .button {
   margin: 5px;
   padding: 10px 20px;
@@ -34,12 +48,18 @@ const selectTechnology = () => {
   border-radius: 4px;
 }
 
-button.active {
+.button.active {
   background-color: var(--soft_orange);
 }
 
-button:hover {
+.button:hover {
   background-color: var(--soft_yellow);
   color: var(--brown)
 }
+
+.button__icons {
+  width: 32px;
+  height: 32px;
+}
 </style>
+

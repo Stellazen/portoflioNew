@@ -13,52 +13,46 @@ export default defineComponent({
     TechSelector,
   },
   setup() {
-    const selectedTechnology = ref<string | null>(null);
-    const projects = ref(Data);
+    const projects = ref(Data)
+    const selectedTechnology = ref<string | null>(null)
 
-    const availableTechnologies = computed(() => {
-      const technologiesSet = new Set<string>();
+    const technologies = computed(() => {
+      const techSet = new Set<string>()
       projects.value.forEach(project => {
-        project.technologies.forEach((tech: string) => {
-          technologiesSet.add(tech);
-        });
-      });
-      return Array.from(technologiesSet);
-    });
+        project.technologies.forEach((tech: string) => techSet.add(tech))
+      })
+      return Array.from(techSet)
+    })
 
     const filteredProjects = computed(() => {
       if (!selectedTechnology.value) {
-        return projects.value;
+        return projects.value
       }
       return projects.value.filter(project =>
-        project.technologies.includes(selectedTechnology.value)
-      );
-    });
+        project.technologies.includes(selectedTechnology.value!)
+      )
+    })
 
-    const selectTechnology = (tech: string | null) => {
-      selectedTechnology.value = tech;
-    };
+    const selectTechnology = (tech: string) => {
+      selectedTechnology.value = tech
+    }
 
     return {
+      projects,
+      technologies,
       selectedTechnology,
       filteredProjects,
-      availableTechnologies,
       selectTechnology,
-    };
+    }
   }
-});
+})
 </script>
 
 <template>
-  <ImageHeader />
-  <div>
+  <ImageHeader /> 
+  <div class="selector_icons">
     <TechSelector
-      tech="All"
-      :selectedTechnology="selectedTechnology"
-      @select="selectTechnology(null)"
-    />
-    <TechSelector
-      v-for="tech in availableTechnologies"
+      v-for="tech in technologies"
       :key="tech"
       :tech="tech"
       :selectedTechnology="selectedTechnology"
@@ -79,6 +73,9 @@ export default defineComponent({
 </template>
 
 <style scoped>
-/* Adicione estilos conforme necessário */
+ .selector_icons{
+  display: flex;
+  justify-content: center;
+ }
 </style>
 
