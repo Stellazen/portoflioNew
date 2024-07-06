@@ -4,7 +4,7 @@
 
 <template>
   <header class="header">
-    <h1>oi, eu sou a Stella</h1>
+    <h1 class="header__title">oi, eu sou a Stella</h1>
   </header>
 </template>
 
