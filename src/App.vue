@@ -33,7 +33,7 @@ export default defineComponent({
       )
     })
 
-    const selectTechnology = (tech: string) => {
+    const selectTechnology = (tech: string | null) => {
       selectedTechnology.value = tech
     }
 
@@ -51,6 +51,7 @@ export default defineComponent({
 <template>
   <ImageHeader /> 
   <div class="selector_icons">
+    <button class="selector__button" @click="selectTechnology(null)" :class="{ active: !selectedTechnology }">All Projects</button>
     <TechSelector
       v-for="tech in technologies"
       :key="tech"
@@ -73,9 +74,30 @@ export default defineComponent({
 </template>
 
 <style scoped>
- .selector_icons{
+.selector_icons {
   display: flex;
   justify-content: center;
- }
+  margin: 20px;
+}
+.selector__button{
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--black);
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: var(--fonte_texto);
+}
+.selector__button.active{
+  background-color: var(--soft_yellow);
+  color:var(--black)
+}
+.selector__button:hover{
+  background-color: var(--soft_orange);
+  color: var(--brown)
+}
+
+
 </style>
 

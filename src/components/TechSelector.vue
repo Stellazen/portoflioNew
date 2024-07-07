@@ -34,26 +34,22 @@ const selectTechnology = () => {
 </template>
 
 <style scoped>
-.container{
-    display: flex;
-    flex-direction: row;
-}
 .button {
   margin: 5px;
   padding: 10px 20px;
   border: none;
-  background-color: var(--soft_green);
+  background-color: var(--black);
   color: white;
   cursor: pointer;
   border-radius: 4px;
 }
 
 .button.active {
-  background-color: var(--soft_orange);
+  background-color: var(--soft_yellow);
 }
 
 .button:hover {
-  background-color: var(--soft_yellow);
+  background-color: var(--soft_orange);
   color: var(--brown)
 }
 
