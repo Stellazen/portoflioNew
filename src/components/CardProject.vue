@@ -13,9 +13,9 @@ const props = defineProps<{
 <template>
   <div class="container">
     <div class="container__description">
-      <h2>{{ name }}</h2>
+      <h2 class="container__title">{{ name }}</h2>
       <p class="container__description__p">{{ props.description }}</p>
-      <div>
+      <div class="container__description__technologies">
         <span class="container__description__technology" v-for="(tech, index) in props.technologies" :key="index">{{ tech }}</span>
       </div>
     </div>
@@ -28,21 +28,34 @@ const props = defineProps<{
 <style scoped>
     .container{
       display: flex;
-      margin: 15px;
+      margin: 20px;
+      gap: 20px;
+      border-radius: 15px;
       justify-content: center;
+    }
+    .container__title{
+      margin: 5px 0 5px 0;
+      background-color: var(--red);
     }
     .container__description{
       max-width: 500px;
+      color: var(--white);
+    }
+    .container__description__technologies{
+      display: flex;
+      margin: 10px 0 10px 0;
+      gap:10px;
+    }
+    .container__description__technology{
+      background-color: var(--black);
+      padding: 5px;
+      border-radius: 5px;
+      color: lightgray;
     }
     .container__photo{
         width: 500px;
         height: 300px;
         background: no-repeat center center cover;
-    }
-    .container__description__technology{
-      background-color: var(--soft_green);
-      margin: 5px;
-      padding: 5px;
-      border-radius: 5px;
+        align-self: center;
     }
 </style>
