@@ -1,6 +1,7 @@
 <script lang="ts">
 import { defineComponent, ref, computed } from 'vue'
 import ImageHeader from './components/ImageHeader.vue'
+import AboutMe from './components/AboutMe.vue'
 import CardProject from './components/CardProject.vue'
 import TechSelector from './components/TechSelector.vue'
 import Data from './data/data.json'
@@ -9,6 +10,7 @@ export default defineComponent({
   name: 'App',
   components: {
     ImageHeader,
+    AboutMe,
     CardProject,
     TechSelector,
   },
@@ -50,6 +52,7 @@ export default defineComponent({
 
 <template>
   <ImageHeader /> 
+  <AboutMe />
   <div class="selector_icons">
     <button class="selector__button" @click="selectTechnology(null)" :class="{ active: !selectedTechnology }">All Projects</button>
     <TechSelector
@@ -88,6 +91,7 @@ export default defineComponent({
   cursor: pointer;
   border-radius: 4px;
   font-family: var(--fonte_texto);
+  font-weight: 600;
 }
 .selector__button.active{
   background-color: var(--soft_yellow);
@@ -97,7 +101,6 @@ export default defineComponent({
   background-color: var(--soft_orange);
   color: var(--brown)
 }
-
 
 </style>
 
