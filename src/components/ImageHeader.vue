@@ -19,9 +19,10 @@ onMounted(() => {
           
 
   <header class="header">
+    <!-- <img class="header__image__arte" src="../assets/notebook.png" alt=""> -->
     <div class="header__container">
       <h1 class="header__title" data-aos="fade-right">
-        Oi, eu sou a Stella<br>Desenvolvedora Web
+        Stella Zen<br>Desenvolvedora Web
       </h1>
       <div class="header__contact" 
       data-aos-anchor-placement="bottom-bottom">
@@ -38,15 +39,20 @@ onMounted(() => {
 
 <style scoped>
 .header {
-  background: url('../assets/waves.jpg') no-repeat center center;
+  background: url('../assets/laptop.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   width: 100vw;
   height: 100vh;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
+  padding: 100px;
+}
+.header__image__arte{
+  width: 500px;
+  
 }
 .header__container{
   display: flex;
@@ -58,10 +64,15 @@ onMounted(() => {
   font-size: 50px;
   font-weight: bold;
   font-family: var(--font-title);
+  text-align: center;
 }
 .header__contact{
+  margin-top: 20px;
   display: flex;
   gap: 50px;
+}
+a{
+  text-decoration: none;
 }
 .header__contact__icon{
   color: var(--white);

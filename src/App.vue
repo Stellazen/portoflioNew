@@ -2,17 +2,21 @@
 import { defineComponent, ref, computed } from 'vue'
 import ImageHeader from './components/ImageHeader.vue'
 import AboutMe from './components/AboutMe.vue'
-import CardProject from './components/CardProject.vue'
 import TechSelector from './components/TechSelector.vue'
+import CardProject from './components/CardProject.vue'
+import GetInTouch from './components/GetInTouch.vue'
+
 import Data from './data/data.json'
 
 export default defineComponent({
   name: 'App',
   components: {
     ImageHeader,
-    AboutMe,
     CardProject,
     TechSelector,
+    AboutMe,
+    GetInTouch,
+
   },
   setup() {
     const projects = ref(Data)
@@ -53,15 +57,19 @@ export default defineComponent({
 <template>
   <ImageHeader /> 
   <AboutMe />
-  <div class="selector_icons">
-    <button class="selector__button" @click="selectTechnology(null)" :class="{ active: !selectedTechnology }">All Projects</button>
-    <TechSelector
-      v-for="tech in technologies"
-      :key="tech"
-      :tech="tech"
-      :selectedTechnology="selectedTechnology"
-      @select="selectTechnology"
-    />
+  <div class="projects">
+    <h2 class="projects__title">Meus Projetos</h2>
+    <div class="projects__icons">
+      <button class="selector__button" @click="selectTechnology(null)" :class="{ active: !selectedTechnology }">All Projects</button>
+      <TechSelector
+        v-for="tech in technologies"
+        :key="tech"
+        :tech="tech"
+        :selectedTechnology="selectedTechnology"
+        @select="selectTechnology"
+      />
+    </div>
+    <p>filtre por tecnologia</p>
   </div>
   <div>
     <CardProject
@@ -74,13 +82,24 @@ export default defineComponent({
       :img="project.img"
     />
   </div>
+  <GetInTouch />
 </template>
 
 <style scoped>
-.selector_icons {
+.projects{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projects__title{
+  font-family: var(--font-title);
+  font-size: 2em;
+  text-align: center
+}
+.projects__icons {
   display: flex;
   justify-content: center;
-  margin: 20px;
+  margin-top: 20px;
 }
 .selector__button{
   margin: 5px;
