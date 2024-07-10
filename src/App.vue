@@ -69,9 +69,9 @@ export default defineComponent({
         @select="selectTechnology"
       />
     </div>
-    <p>filtre por tecnologia</p>
+    <p class="projects__p">filtre por tecnologia</p>
   </div>
-  <div>
+  <div class="projects__card">
     <CardProject
       v-for="(project, index) in filteredProjects"
       :key="index"
@@ -94,7 +94,11 @@ export default defineComponent({
 .projects__title{
   font-family: var(--font-title);
   font-size: 2em;
-  text-align: center
+  text-align: center;
+  color: var(--white);
+}
+.projects__p{
+  color: gray;
 }
 .projects__icons {
   display: flex;
@@ -119,6 +123,13 @@ export default defineComponent({
 .selector__button:hover{
   background-color: var(--soft_orange);
   color: var(--brown)
+}
+.projects__card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:100px;
+  margin-top: 100px;
 }
 
 </style>
