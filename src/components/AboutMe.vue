@@ -1,14 +1,18 @@
 <script lang="ts">
-import { onMounted } from 'vue';
+import { defineComponent,onMounted } from 'vue';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-onMounted(() => {
-  AOS.init({
-    // Aqui você pode adicionar configurações globais, se necessário
-    duration: 1000,
-    once: true,
-  });
+export default defineComponent({
+  name: 'AboutMe',
+  setup() {
+    onMounted(() => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    });
+  },
 });
 
 </script>

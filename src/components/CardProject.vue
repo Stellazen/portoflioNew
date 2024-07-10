@@ -6,7 +6,6 @@ import 'aos/dist/aos.css';
 
 onMounted(() => {
   AOS.init({
-    // Aqui você pode adicionar configurações globais, se necessário
     duration: 1000,
     once: true,
   });
