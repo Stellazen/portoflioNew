@@ -46,7 +46,7 @@ export default defineComponent({
     }
     .about__title{
         font-family: var(--font-title);
-        font-size: 2em;
+        font-size: 2.5em;
     }
     .about__image{
         width: 350px;
