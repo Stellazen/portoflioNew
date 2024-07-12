@@ -96,7 +96,8 @@
     .contact__links{
         display: flex;
         justify-content: center;
-        gap:50px;      
+        gap:50px;  
+        margin-top: 20px;    
     }
     .contact__link{
        background-color: var(--black);

@@ -45,12 +45,12 @@ const selectTechnology = () => {
 }
 
 .button.active {
-  background-color: var(--soft_yellow);
+  border:2px solid var(--soft_yellow);
 }
 
 .button:hover {
-  background-color: var(--soft_orange);
-  color: var(--brown)
+  border: 2px solid var(--soft_orange);
+  color: var(--brown);
 }
 
 .button__icons {

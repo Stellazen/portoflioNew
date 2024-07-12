@@ -117,12 +117,10 @@ export default defineComponent({
   font-weight: 600;
 }
 .selector__button.active{
-  background-color: var(--soft_yellow);
-  color:var(--black)
+  border:2px solid var(--soft_yellow);
 }
 .selector__button:hover{
-  background-color: var(--soft_orange);
-  color: var(--brown)
+  border:2px solid var(--soft_orange);
 }
 .projects__card{
   display: flex;
