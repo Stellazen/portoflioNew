@@ -32,7 +32,7 @@ const props = defineProps<{
         </div>
           <a :href="props.url" target="_blank">
             <button class="container__link" data-aos="fade-right">
-              Link do projeto
+              Link do projeto <img class="container__link__icon" src="../assets/images/icon-link.png" alt="">
             </button>
           </a>
         </div>
@@ -86,14 +86,18 @@ const props = defineProps<{
       text-align: center;
       font-family: var(--fonte-texto);
       max-width: 200px;
-      transition:0.8ms;
+      /* transition:0.8ms; */
       cursor:pointer;
       color:white;
+      display: flex;
+      align-items: center;
+      gap:5px;
     }
     .container__link:hover{
-      background-color: var(--soft_green);
-      color: black;
-      font-weight: 600;
+      border: 2px solid var(--soft_green);
+    }
+    .container__link__icon{
+      width: 20px;
     }
      .container__photo{
       width: 500px;
@@ -110,5 +114,8 @@ const props = defineProps<{
       height: 2px;
       width: 100%;
       margin-top:50px;
+    }
+    a{
+      text-decoration: none;
     }
 </style>
