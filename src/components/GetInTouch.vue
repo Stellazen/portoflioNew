@@ -21,10 +21,10 @@
         </form>
         <div class="contact__links">
             <a class="contact__link" href="mailto:stellazen.xd@gmail.com">
-                Email
+                <img class="contact__link__img" src="../assets/images/icon-mail.png" alt="">
             </a>
             <a class="contact__link" href="https://wa.me/5541996538820">
-                whats
+                <img class="contact__link__img" src="../assets/images/icon-wwp.png" alt="">
             </a>
         </div>   
     </div>
@@ -90,7 +90,8 @@
         
     }
     .contact__form__button:hover{
-        border: 2px solid var(--soft_orange)
+        border: 2px solid var(--soft_orange);
+        color: var(--soft_orange)
     }
     .contact__links{
         display: flex;
@@ -98,15 +99,22 @@
         gap:50px;      
     }
     .contact__link{
-        background-color: var(--black);
-        padding: 5px;
-        border-radius: 10px;
-        color: var(--white);
-        text-decoration: none;
-        margin: 20px 0 20px 0;
+       background-color: var(--black);
+       padding: 10px;
+       border-radius: 50%;
+       text-decoration: none;
+       width: 70px;
+       height: 70px;
+       text-align: center;
+       display: flex;
+       align-items: center;
+       justify-content: center
+    }
+    .contact__link__img{
+        width: 40px;
     }
     .contact__link:hover{
-        border: 2px solid var(--soft_orange)
+        border: 1px solid var(--soft_orange)
     }
     .contact__footer{
         background-color: black;
