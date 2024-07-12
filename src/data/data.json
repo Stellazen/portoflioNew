@@ -32,7 +32,7 @@
             "id": "04",
             "name": "Code Beer",
             "description": "O projeto consiste em uma aplicação que expõe uma API REST de um CRUD de produtos e autenticação, e uma aplicação web contendo uma interface para login e acesso a dados de uma API externa. Depois de logado, o usuário da aplicação web deve poder acessar os dados da Punk API v2. Para esse projeto foi utilizado JavaScript com React Js.",
-            "technologies": ["Figma", "JavaScript","React", "CSS3", "HTML5"],
+            "technologies": ["Figma", "JavaScript","React", "CSS3", "HTML5", "Node Js"],
             "url": "https://github.com/Stellazen/code_beer",
             "img": "/images/code_beer.png",
             "creation_date": "Set/2023"
@@ -109,6 +109,16 @@
             "url": "https://anapaulacandido.com.br/",
             "img": "/images/anapaula.png",
             "creation_date": "Dez/2022"
+            
+        },
+        {
+            "id": "13",
+            "name": "Portfólio de projetos",
+            "description": "Potfólio criado para a exibição de alguns de meus projetos, feito utilizando o Vue Js.",
+            "technologies": [ "Figma", "JavaScript","Vue", "CSS3", "HTML5"],
+            "url": "https://github.com/Stellazen/portoflioNew",
+            "img": "/images/portfolio01.png",
+            "creation_date": "Jul/2024"
             
         }
     ]

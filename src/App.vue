@@ -58,7 +58,7 @@ export default defineComponent({
   <ImageHeader /> 
   <AboutMe />
   <div class="projects">
-    <h2 class="projects__title">Meus Projetos</h2>
+    <h2 class="projects__title">Alguns dos meus projetos</h2>
     <div class="projects__icons">
       <button class="selector__button" @click="selectTechnology(null)" :class="{ active: !selectedTechnology }">All Projects</button>
       <TechSelector
