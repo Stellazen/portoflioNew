@@ -21,7 +21,7 @@ onMounted(() => {
     <!-- <img class="header__image__arte" src="../assets/notebook.png" alt=""> -->
     <div class="header__container">
       <h1 class="header__title" data-aos="fade-right">
-        Stella Zen<br>Desenvolvedora Web
+        Stella Zen<br>Web Developer
       </h1>
       <div class="header__contact" 
       data-aos-anchor-placement="bottom-bottom">
@@ -38,7 +38,7 @@ onMounted(() => {
 
 <style scoped>
 .header {
-  background: url('../assets/laptop.jpg') no-repeat center center;
+  background: url('../assets/images/laptop.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   width: 100vw;

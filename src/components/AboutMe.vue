@@ -19,10 +19,13 @@ export default defineComponent({
 
 <template>
     <div class="about">
-        <img src="../assets/stella.png" class="about__image" alt="" data-aos="fade-up">
+        <img src="../assets/images/stella.png" class="about__image" alt="" data-aos="fade-up">
         <div class="about__description" data-aos="fade-up">
-            <h2 class="about__title" data-aos="fade-up">Frase de efeito legal chamativa</h2>
-            <p>texto sobre mim texto sobre mim texto sobre mim texto sobre mim texto sobre mim texto sobre mim texto sobre mim texto sobre mim Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam doloribus, assumenda consequuntur laudantium deleniti debitis sed aliquam odio, temporibus fugiat aliquid illum magnam iste corrupti incidunt minima similique praesentium? Molestiae.</p>
+            <h2 class="about__title" data-aos="fade-up">Unindo criativade e tecnologia</h2>
+            <p class="about__description__p">Desenvolvedora Web e entusiasta de UX, desde sempre me considero uma pessoa criativa e com sede de aprender. 
+            </p>
+            <p class="about__description__p">Atualmente cursando Ciência de Dados e com o objetivo de me aprofundar cada vez mais no mundo da tecnologia.</p>
+            <p class="about__description__p">Crio soluções visuais, como landing pages e sites institucionais, e também realizo otimização de planilhas para o recebimento de leads e melhorias no SEO do seu site.</p>
             <div class="about__skills" >
             <p class="about__skills__p" data-aos="fade-left">pró-atividade</p>
             <p class="about__skills__p" data-aos="fade-left">pontualidade</p>
@@ -46,7 +49,12 @@ export default defineComponent({
     }
     .about__title{
         font-family: var(--font-title);
-        font-size: 2.5em;
+        font-size: 3em;
+        line-height: 1em;
+        /* text-decoration: underline var(--soft_orange) */
+    }
+    .about__description__p{
+      margin-top: 20px;
     }
     .about__image{
         width: 350px;
@@ -55,7 +63,7 @@ export default defineComponent({
     .about__description{
         max-width: 600px;
         padding-left: 50px;
-        color: var(--white)
+        color: var(--white);
     }
     .about__skills{
         margin-top: 20px;
