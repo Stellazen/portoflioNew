@@ -38,7 +38,7 @@ onMounted(() => {
 
 <style scoped>
 .header {
-  background: url('../assets/images/laptop.jpg') no-repeat center center;
+  /* background: url('../assets/images/laptop.jpg') no-repeat center center; */
   background-size: cover;
   background-attachment: fixed;
   width: 100vw;
@@ -60,10 +60,11 @@ onMounted(() => {
   margin-left: 50px;
 }
 .header__title{
-  font-size: 50px;
+  font-size: 4em;
   font-weight: bold;
   font-family: var(--font-title);
   text-align: center;
+  color: var(--white)
 }
 .header__contact{
   margin-top: 20px;
