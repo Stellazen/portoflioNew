@@ -18,9 +18,8 @@ onMounted(() => {
           
 
   <header class="header">
-    <!-- <img class="header__image__arte" src="../assets/notebook.png" alt=""> -->
     <div class="header__container">
-      <h1 class="header__title" data-aos="fade-right">
+      <h1 class="header__title">
         Stella Zen<br>Web Developer
       </h1>
       <div class="header__contact" 
@@ -38,20 +37,16 @@ onMounted(() => {
 
 <style scoped>
 .header {
-  /* background: url('../assets/images/laptop.jpg') no-repeat center center; */
+  background: url('../assets/images/fundo-astro.png') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   padding: 100px;
-}
-.header__image__arte{
-  width: 500px;
-  
 }
 .header__container{
   display: flex;
