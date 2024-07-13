@@ -22,10 +22,11 @@ export default defineComponent({
         <img src="../assets/images/stella-editada.png" class="about__image" alt="" data-aos="fade-up">
         <div class="about__description" data-aos="fade-up">
             <h2 class="about__title" data-aos="fade-up">Unindo criativade e tecnologia</h2>
-            <p class="about__description__p">Desenvolvedora Web e entusiasta de UX, desde sempre me considero uma pessoa criativa e com sede de aprender. 
+            <p class="about__description__p">Desenvolvedora FullStack</p>
+            <p> JavaScript | Node Js | TypeScript | CSS | HTML | MySQL | React | Vue</p>
+            <p class="about__description__p">Sou uma pessoa criativa e com sede de conhecimento. 
             </p>
-            <p class="about__description__p">Atualmente cursando Ciência de Dados e com o objetivo de me aprofundar cada vez mais no mundo da tecnologia.</p>
-            <p class="about__description__p">Crio soluções visuais, como landing pages e sites institucionais, e também realizo otimização de planilhas para o recebimento de leads e melhorias no SEO do seu site.</p>
+            <p class="about__description__p">Crio soluções visuais, como landing pages e sites institucionais, realizo otimização de planilhas para o recebimento de leads e melhorias no SEO do seu site e outras soluções para web.</p>
             <div class="about__skills" >
             <p class="about__skills__p" data-aos="fade-left">pró-atividade</p>
             <p class="about__skills__p" data-aos="fade-left">pontualidade</p>
