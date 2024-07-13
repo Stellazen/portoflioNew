@@ -50,7 +50,7 @@ const props = defineProps<{
       gap: 20px;
       border-radius: 15px;
       justify-content: center;
-      width: 1100px;
+      width: 90%;
     }
     .container__items{
       display: flex;
@@ -120,11 +120,6 @@ const props = defineProps<{
       text-decoration: none;
     }
 
-    @media (max-width:1060px) {
-      .container__photo{
-        width: 35%;
-      }
-    }
     @media (max-width:480px){
       .container{
         flex-direction: column;
@@ -139,6 +134,19 @@ const props = defineProps<{
       .container__photo{
         width: 80vw;
       
+      }
+    }
+    @media (max-width:760px){
+      .container__items{
+        flex-direction: column;
+      }
+      .container__description{
+        width: 100%;
+      }
+      .container__photo{
+        width: 70vw;
+        background-repeat: no-repeat;
+        background-size: cover;
       }
     }
 </style>

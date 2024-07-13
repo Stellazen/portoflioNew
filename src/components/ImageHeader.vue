@@ -88,4 +88,13 @@ a{
     font-size: 3em;
   }
 }
+@media (max-width:760px){
+  .header{
+    background-position: right center;
+  }
+  .header__title{
+    line-height: 1.2em;
+    font-size: 3em;
+  }
+}
 </style>

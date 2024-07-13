@@ -93,4 +93,13 @@ export default defineComponent({
         font-size: 2.5em;
       }
     }
+    @media (max-width:970px){
+      .about{
+        flex-direction: column;
+      }
+      .about__title{
+        margin-top:50px;
+      }
+    }
+
 </style>
