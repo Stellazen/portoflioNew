@@ -121,4 +121,13 @@
         background-color: black;
         height:100px
     }
+
+    @media (max-width: 480px){
+        .contact__form__input{
+            width: 280px;
+        }
+        .contact__form__text{
+            width: 280px;
+        }
+    }
 </style>

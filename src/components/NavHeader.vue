@@ -35,6 +35,7 @@
 
 <style scoped>
 .header__nav{
+    width: 100%;
   padding: 20px;
   background-color: var(--black);
 }
@@ -55,5 +56,17 @@
 .header__nav__li:hover{
     border: 2px solid var(--soft_orange);
     
+}
+
+@media (max-width:480px){
+    .header__nav{
+        padding: 10px;
+    }
+    .header__nav__ul{
+        gap:20px;
+    }
+    .header__nav__li{
+        font-size: 12px;
+    }
 }
 </style>

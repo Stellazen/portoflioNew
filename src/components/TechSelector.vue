@@ -57,5 +57,9 @@ const selectTechnology = () => {
   width: 32px;
   height: 32px;
 }
+
+@media (max-width:480px){
+  
+}
 </style>
 
