@@ -77,4 +77,15 @@ a{
 .header__contact__icon:hover{
   color: var(--soft_orange);
 }
+
+@media (max-width: 480px){
+  .header{
+    background-position: right center;
+    padding: 0;
+  }
+  .header__title{
+    line-height: 1.2em;
+    font-size: 3em;
+  }
+}
 </style>

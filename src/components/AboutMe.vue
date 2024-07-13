@@ -45,7 +45,6 @@ export default defineComponent({
         justify-content: center;
         align-items: center;
         margin: 50px;
-        height: 50vh;
     }
     .about__title{
         font-family: var(--font-title);
@@ -61,7 +60,7 @@ export default defineComponent({
         border-radius: 50%;
     }
     .about__description{
-        max-width: 600px;
+        width: 600px;
         padding-left: 50px;
         color: var(--white);
     }
@@ -76,5 +75,22 @@ export default defineComponent({
       padding: 5px;
       border-radius: 5px;
       color: lightgray;
+    }
+
+    @media (max-width:480px){
+      .about{
+        flex-direction: column;
+        margin: 50px 10px 50px 10px;
+      }
+      .about__description{
+        padding: 20px;
+        width: 80%;
+      }
+      .about__image{
+        width: 80%;
+      }
+      .about__title{
+        font-size: 2.5em;
+      }
     }
 </style>

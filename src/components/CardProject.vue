@@ -63,11 +63,12 @@ const props = defineProps<{
       text-decoration: underline var(--soft_green);
     }
     .container__description{
-      max-width: 500px;
+      width: 50%;
       color: var(--white);
     }
     .container__description__technologies{
       display: flex;
+      flex-wrap: wrap;
       margin: 10px 0 10px 0;
       gap:10px;
     }
@@ -100,7 +101,7 @@ const props = defineProps<{
       width: 20px;
     }
      .container__photo{
-      width: 500px;
+      width: 45%;
       height: 300px;
       background: no-repeat center center cover;
       align-self: center;
@@ -117,5 +118,27 @@ const props = defineProps<{
     }
     a{
       text-decoration: none;
+    }
+
+    @media (max-width:1060px) {
+      .container__photo{
+        width: 35%;
+      }
+    }
+    @media (max-width:480px){
+      .container{
+        flex-direction: column;
+        width: 80vw;
+      }
+      .container__items{
+        flex-direction: column;
+      }
+      .container__description{
+        width: 100%;
+      }
+      .container__photo{
+        width: 80vw;
+      
+      }
     }
 </style>

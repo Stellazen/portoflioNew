@@ -57,35 +57,37 @@ export default defineComponent({
 </script>
 
 <template>
-  <NavHeader />
-  <ImageHeader /> 
-  <AboutMe />
-  <div class="projects">
-    <h2 class="projects__title">Alguns dos meus projetos</h2>
-    <div class="projects__icons">
-      <button class="selector__button" @click="selectTechnology(null)" :class="{ active: !selectedTechnology }">All Projects</button>
-      <TechSelector
-        v-for="tech in technologies"
-        :key="tech"
-        :tech="tech"
-        :selectedTechnology="selectedTechnology"
-        @select="selectTechnology"
+  <div class="body">
+    <NavHeader />
+    <ImageHeader />
+    <AboutMe />
+    <div class="projects">
+      <h2 class="projects__title">Alguns dos meus projetos</h2>
+      <div class="projects__icons">
+        <button class="selector__button" @click="selectTechnology(null)" :class="{ active: !selectedTechnology }">All Projects</button>
+        <TechSelector
+          v-for="tech in technologies"
+          :key="tech"
+          :tech="tech"
+          :selectedTechnology="selectedTechnology"
+          @select="selectTechnology"
+        />
+      </div>
+      <p class="projects__p">filtre por tecnologia</p>
+    </div>
+    <div class="projects__card">
+      <CardProject
+        v-for="(project, index) in filteredProjects"
+        :key="index"
+        :name="project.name"
+        :description="project.description"
+        :technologies="project.technologies"
+        :url="project.url"
+        :img="project.img"
       />
     </div>
-    <p class="projects__p">filtre por tecnologia</p>
+    <GetInTouch />
   </div>
-  <div class="projects__card">
-    <CardProject
-      v-for="(project, index) in filteredProjects"
-      :key="index"
-      :name="project.name"
-      :description="project.description"
-      :technologies="project.technologies"
-      :url="project.url"
-      :img="project.img"
-    />
-  </div>
-  <GetInTouch />
 </template>
 
 <style scoped>
@@ -105,6 +107,7 @@ export default defineComponent({
 }
 .projects__icons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px;
 }
@@ -133,5 +136,10 @@ export default defineComponent({
   margin-top: 100px;
 }
 
+@media (max-width:480px){
+  .selector__button{
+    padding: 0;
+  }
+}
 </style>
 
