@@ -1,5 +1,6 @@
 <script lang="ts">
 import { defineComponent, ref, computed } from 'vue'
+import NavHeader from './components/NavHeader.vue'
 import ImageHeader from './components/ImageHeader.vue'
 import AboutMe from './components/AboutMe.vue'
 import TechSelector from './components/TechSelector.vue'
@@ -11,6 +12,7 @@ import Data from './data/data.json'
 export default defineComponent({
   name: 'App',
   components: {
+    NavHeader,
     ImageHeader,
     CardProject,
     TechSelector,
@@ -55,6 +57,7 @@ export default defineComponent({
 </script>
 
 <template>
+  <NavHeader />
   <ImageHeader /> 
   <AboutMe />
   <div class="projects">
