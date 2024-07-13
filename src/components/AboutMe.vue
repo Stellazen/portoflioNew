@@ -19,7 +19,7 @@ export default defineComponent({
 
 <template>
     <div class="about">
-        <img src="../assets/images/stella.png" class="about__image" alt="" data-aos="fade-up">
+        <img src="../assets/images/stella-editada.png" class="about__image" alt="" data-aos="fade-up">
         <div class="about__description" data-aos="fade-up">
             <h2 class="about__title" data-aos="fade-up">Unindo criativade e tecnologia</h2>
             <p class="about__description__p">Desenvolvedora Web e entusiasta de UX, desde sempre me considero uma pessoa criativa e com sede de aprender. 
@@ -54,6 +54,7 @@ export default defineComponent({
     }
     .about__description__p{
       margin-top: 20px;
+      text-align: justify;
     }
     .about__image{
         width: 350px;
