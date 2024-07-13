@@ -47,6 +47,7 @@ onMounted(() => {
   flex-direction: column;
   justify-content: center;
   padding: 100px;
+  border-bottom: 1px solid var(--soft_green);
 }
 .header__container{
   display: flex;
