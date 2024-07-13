@@ -50,6 +50,7 @@
     cursor:pointer;
     padding: 10px;
     border-radius: 10px;
+    text-transform: uppercase;
 }
 .header__nav__li:hover{
     border: 2px solid var(--soft_orange);
