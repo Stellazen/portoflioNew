@@ -10,23 +10,26 @@
     });
     });
 
-    const moveTo = (x :number , y :number) => {
-        window.scrollTo(x,y)
-    }
+    const moveTo = (sectionId: string) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
 </script>
 
 <template>
     <div class="header">
         <nav class="header__nav">
             <ul class="header__nav__ul">
-                <li class="header__nav__li" data-aos="fade-right" @click="moveTo(0, 900)">
+                <li class="header__nav__li" data-aos="fade-right" @click="moveTo('about-me')">
                     <p>Quem sou eu</p>
                 </li>
-                <li class="header__nav__li" data-aos="fade-right"  @click="moveTo(0, 1500)">
+                <li class="header__nav__li" data-aos="fade-right"  @click="moveTo('projects')">
                     <p>Projetos</p>
                 </li>
-                <li class="header__nav__li" data-aos="fade-right" @click="moveTo(0, 8000)">
-                    <p>Fale Comigo</p>
+                <li class="header__nav__li" data-aos="fade-right" @click="moveTo('contact')">
+                    <p>Entre em Contato</p>
                 </li>
             </ul>
         </nav>
