@@ -60,8 +60,10 @@ export default defineComponent({
   <div class="body">
     <NavHeader />
     <ImageHeader />
-    <AboutMe />
-    <div class="projects">
+    <div id="about-me">
+      <AboutMe />
+    </div>
+    <div class="projects" id="projects">
       <h2 class="projects__title">Alguns dos meus projetos</h2>
       <div class="projects__icons">
         <button class="selector__button" @click="selectTechnology(null)" :class="{ active: !selectedTechnology }">All Projects</button>
@@ -86,7 +88,9 @@ export default defineComponent({
         :img="project.img"
       />
     </div>
-    <GetInTouch />
+    <div id="contact" >
+      <GetInTouch />
+    </div>
   </div>
 </template>
 

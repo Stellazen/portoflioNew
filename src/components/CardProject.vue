@@ -63,7 +63,7 @@ const props = defineProps<{
       text-decoration: underline var(--soft_green);
     }
     .container__description{
-      width: 50%;
+      width: 500px;
       color: var(--white);
     }
     .container__description__technologies{
@@ -101,7 +101,7 @@ const props = defineProps<{
       width: 20px;
     }
      .container__photo{
-      width: 45%;
+      width: 500px;
       height: 300px;
       background: no-repeat center center cover;
       align-self: center;
