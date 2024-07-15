@@ -143,6 +143,8 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 300px;
+  color:white;
 }
 .contact__form__label {
   color: var(--white);
@@ -214,7 +216,8 @@ export default defineComponent({
 }
 
 .success{
-    color: white;
+  color: white;
+
 }
 
 
