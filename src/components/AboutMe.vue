@@ -19,23 +19,22 @@ export default defineComponent({
 
 <template>
     <div class="about">
-        <img src="../assets/images/stella-editada.png" class="about__image" alt="" data-aos="fade-up">
+        <img src="../assets/images/stella.png" class="about__image" alt="" data-aos="fade-up">
         <div class="about__description" data-aos="fade-up">
             <h2 class="about__title" data-aos="fade-up">Unindo criativade e tecnologia</h2>
-            <p class="about__description__p">Desenvolvedora FullStack</p>
-            <p> JavaScript | Node Js | TypeScript | CSS | HTML | MySQL | React | Vue</p>
-            <p class="about__description__p">Sou uma pessoa criativa e com sede de conhecimento. 
-            </p>
-            <p class="about__description__p">Crio soluções visuais, como landing pages e sites institucionais, realizo otimização de planilhas para o recebimento de leads e melhorias no SEO do seu site e outras soluções para web.</p>
             <div class="about__skills" >
-            <p class="about__skills__p" data-aos="fade-left">pró-atividade</p>
-            <p class="about__skills__p" data-aos="fade-left">pontualidade</p>
-            <p class="about__skills__p" data-aos="fade-left">comunicação</p>
-            <p class="about__skills__p" data-aos="fade-left">trabalho em equipe</p>
-            <p class="about__skills__p" data-aos="fade-left">curiosidade</p>
-            <p class="about__skills__p" data-aos="fade-left">constante aperfeiçoamento</p>
-            <p class="about__skills__p" data-aos="fade-left">flexibilidade</p>
-        </div>
+            <p class="about__skills__p" data-aos="fade-left">JavaScript</p>
+            <p class="about__skills__p" data-aos="fade-left">TypeScript</p>
+            <p class="about__skills__p" data-aos="fade-left">React</p>
+            <p class="about__skills__p" data-aos="fade-left">Vue</p>
+            <p class="about__skills__p" data-aos="fade-left">HTML</p>
+            <p class="about__skills__p" data-aos="fade-left">CSS</p>
+          
+            </div>
+            <p class="about__description__p">Sou desenvolvedora web e gosto de transformar ideias em experiências digitais interativas, funcionais e responsivas. 
+            </p>
+            <p class="about__description__p">Tenho experiência com interfaces web, recursos educacionais interativos, landing pages e integração de formulários com ferramentas externas. Estou sempre buscando aprender novas tecnologias e aprimorar minhas soluções.</p>
+           
         </div>
     </div>
 </template>
@@ -49,7 +48,7 @@ export default defineComponent({
     }
     .about__title{
         font-family: var(--font-title);
-        font-size: 3em;
+        font-size: 2em;
         line-height: 1em;
         /* text-decoration: underline var(--soft_orange) */
     }
