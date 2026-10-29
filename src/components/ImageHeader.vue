@@ -102,6 +102,8 @@ a{
   .header{
     background-position: right center;
     padding: 0;
+    padding-top: 35px;
+    justify-content: flex-start;
   }
   .header__container h2{
     line-height: 1.2em;
